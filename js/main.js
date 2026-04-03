@@ -42,12 +42,14 @@ if (form) {
         try {
             await fetch("https://script.google.com/macros/s/AKfycbxEBZ8N1PHs13v3EQnhJ2A_Atzqr2zngfttsLRzIo6aNduM9OMRe1Q2DUfJQwqXNyTJ0w/exec", {
                 method: "POST",
+                mode: "no-cors", // ✅ FIX ADDED
                 body: JSON.stringify(data),
                 headers: {
                     "Content-Type": "application/json"
                 }
             });
 
+            // ✅ ALWAYS SUCCESS (because no-cors)
             alert("✅ Submitted successfully! We'll contact you within 24 hours.");
             form.reset();
 
