@@ -40,7 +40,7 @@ if (form) {
         };
 
         try {
-            await fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+            await fetch("https://script.google.com/macros/s/AKfycbxEBZ8N1PHs13v3EQnhJ2A_Atzqr2zngfttsLRzIo6aNduM9OMRe1Q2DUfJQwqXNyTJ0w/exec", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
