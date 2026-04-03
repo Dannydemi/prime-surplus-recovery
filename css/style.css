@@ -1614,3 +1614,30 @@ html {
 section {
     scroll-margin-top: 90px;
 }
+
+/* ================= LEGAL PAGES ================= */
+.legal-section {
+    padding: 120px 0 80px;
+    background: #ffffff;
+}
+
+.legal-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.legal-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-container h3 {
+    margin-top: 2rem;
+    color: #0A2540;
+}
+
+.legal-container p {
+    margin-top: 0.8rem;
+    color: #475569;
+    line-height: 1.7;
+}
