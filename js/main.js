@@ -33,16 +33,20 @@ if (form) {
         e.preventDefault();
 
         const data = {
-            name: form.querySelectorAll('input')[0].value,
-            email: form.querySelectorAll('input')[1].value,
-            phone: form.querySelectorAll('input')[2].value,
-            message: form.querySelector('textarea').value
+            name: form.querySelector('[name="name"]').value,
+            email: form.querySelector('[name="email"]').value,
+            phone: form.querySelector('[name="phone"]').value,
+            message: form.querySelector('[name="message"]').value,
+
+            // ✅ NEW FIELDS
+            claimAmount: form.querySelector('[name="claimAmount"]').value,
+            state: form.querySelector('[name="state"]').value
         };
 
         try {
             await fetch("https://script.google.com/macros/s/AKfycbxEBZ8N1PHs13v3EQnhJ2A_Atzqr2zngfttsLRzIo6aNduM9OMRe1Q2DUfJQwqXNyTJ0w/exec", {
                 method: "POST",
-                mode: "no-cors", // ✅ FIX ADDED
+                mode: "no-cors", // ✅ KEEP THIS
                 body: JSON.stringify(data),
                 headers: {
                     "Content-Type": "application/json"
